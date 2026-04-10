@@ -1714,16 +1714,15 @@ body {
     color: var(--text-dim);
 }
 
-/* ── REVEAL ANIMATION ── */
+/* ── REVEAL ANIMATION (disabled — all visible) ── */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 1;
+    transform: none;
 }
 
 .reveal.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
 }
 
 /* ── RESPONSIVE ── */
