@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUVAH | שובה — Coming Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#hero" class="nav-logo">שובה</a>
+        <div class="nav-links" id="navLinks">
+            <a href="#overview">סקירה</a>
+            <a href="#lineup">Lineup</a>
+            <a href="#experience">החוויה</a>
+            <a href="#production">הפקה</a>
+            <a href="#financials">פיננסים</a>
+            <a href="#sponsors">חסויות</a>
+            <a href="#legal">משפטי</a>
+            <a href="#global">גלובלי</a>
+            <a href="#investor">למשקיע</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ═══════════════════════════════════════ -->
+<section id="hero" class="hero">
+    <div class="hero-bg">
+        <div class="particle-field" id="particles"></div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-badge">A TATE PRODUCTION</div>
+        <h1 class="hero-title">
+            <span class="hero-hebrew">שובה</span>
+            <span class="hero-english">SHUVAH</span>
+        </h1>
+        <p class="hero-tagline">חוזרים הביתה &mdash; Coming Home</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <span class="hero-meta-icon">🏟️</span>
+                <span>Barclays Center, Brooklyn</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-icon">🤝</span>
+                <span>גברים + נשים עם מחיצה</span>
+            </div>
+            <div class="hero-meta-item">
+                <span class="hero-meta-icon">👥</span>
+                <span>19,000 משתתפים</span>
+            </div>
+        </div>
+        <a href="#overview" class="hero-cta">גלה עוד</a>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-indicator"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- OVERVIEW -->
+<!-- ═══════════════════════════════════════ -->
+<section id="overview" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>מספרים במבט אחד</h2>
+            <p class="section-subtitle">Financial Snapshot &mdash; לילה אחד, 19,000 איש, עם מחיצה</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-gold">
+                <div class="stat-number">$6,000,000</div>
+                <div class="stat-label">סה"כ הכנסות</div>
+                <div class="stat-sub">Total Revenue</div>
+            </div>
+            <div class="stat-card stat-dark">
+                <div class="stat-number">$2,200,000</div>
+                <div class="stat-label">סה"כ עלויות</div>
+                <div class="stat-sub">Total Costs</div>
+            </div>
+            <div class="stat-card stat-fire">
+                <div class="stat-number">$3,800,000</div>
+                <div class="stat-label">רווח נקי</div>
+                <div class="stat-sub">Net Profit</div>
+            </div>
+            <div class="stat-card stat-glow">
+                <div class="stat-number">63%</div>
+                <div class="stat-label">מרווח רווח</div>
+                <div class="stat-sub">Profit Margin</div>
+            </div>
+        </div>
+
+        <!-- Revenue Breakdown -->
+        <div class="revenue-breakdown">
+            <h3>פילוח הכנסות</h3>
+            <div class="bar-chart">
+                <div class="bar-row">
+                    <span class="bar-label">כרטיסים (19K)</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="38" style="--bar-color: var(--gold)"></div></div>
+                    <span class="bar-value">$2,300,000</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">חסויות</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="37" style="--bar-color: var(--accent)"></div></div>
+                    <span class="bar-value">$2,200,000</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">Merch</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="7" style="--bar-color: #22C55E"></div></div>
+                    <span class="bar-value">$450,000</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">Streaming PPV</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="7" style="--bar-color: #3B82F6"></div></div>
+                    <span class="bar-value">$500,000</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">אוכל ושתייה</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="6" style="--bar-color: #A855F7"></div></div>
+                    <span class="bar-value">$370,000</span>
+                </div>
+                <div class="bar-row">
+                    <span class="bar-label">VIP + נוספות</span>
+                    <div class="bar-track"><div class="bar-fill" data-width="5" style="--bar-color: var(--silver)"></div></div>
+                    <span class="bar-value">$300,000</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="breakeven-box">
+            <div class="breakeven-icon">📈</div>
+            <div>
+                <strong>Break-Even עם חסויות:</strong> ~3,300 כרטיסים בלבד (17% מהקיבולת)
+                <br><span class="text-muted">$99 עד $199 | ממוצע: $121 | 19,000 איש — גברים + נשים עם מחיצה | קירוב + נשמה</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- FORMAT: 2 NIGHTS -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-black">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>הפורמט &mdash; מחיצה + קירוב</h2>
+            <p class="section-subtitle">גברים ונשים ביחד, באותו אולם, עם מחיצה &mdash; כמו שצריך</p>
+        </div>
+
+        <div class="nights-grid">
+            <div class="night-card night-men">
+                <div class="night-icon">🕎</div>
+                <h3>19,000 נשמות באולם אחד</h3>
+                <div class="night-capacity">Barclays Center &mdash; מוצ"ש סתיו 2026</div>
+                <p>גברים ונשים ביחד, עם מחיצה מכובדת. כשנשים באות &mdash; גם גברים פחות חזקים באים. זה לא רק הופעה, זה <strong>קירוב</strong>. מוזיקה יהודית וחסידית שנוגעת בנשמה.</p>
+                <div class="night-tags">
+                    <span>🎫 מקסימום $120</span>
+                    <span>🤝 מחיצה</span>
+                    <span>✨ קירוב</span>
+                </div>
+            </div>
+            <div class="night-card night-women">
+                <div class="night-icon">💡</div>
+                <h3>למה ביחד?</h3>
+                <div class="night-capacity">יותר קהל. יותר נשמה. יותר השפעה.</div>
+                <p>כשמשפחות באות ביחד, האירוע הופך מהופעה למסע. אבות ובנים. אמהות ובנות. חברים וחברות. כולם חווים את אותו רגע &mdash; כל אחד מהצד שלו.</p>
+                <div class="night-tags">
+                    <span>👨‍👩‍👧‍👦 משפחתי</span>
+                    <span>🔥 אחדות</span>
+                    <span>💎 חוויה שלמה</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="nights-advantage">
+            <h4>יתרונות הפורמט</h4>
+            <div class="advantage-grid">
+                <div class="adv-item">👥 19,000 איש בלילה אחד</div>
+                <div class="adv-item">🤝 מחיצה מכובדת</div>
+                <div class="adv-item">🕎 קירוב &mdash; מגיעים ביחד</div>
+                <div class="adv-item">💰 עלויות לילה אחד בלבד</div>
+                <div class="adv-item">🎫 כרטיס מקסימום $120</div>
+                <div class="adv-item">🔥 אנרגיה מרוכזת</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- LINEUP -->
+<!-- ═══════════════════════════════════════ -->
+<section id="lineup" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>The Lineup</h2>
+            <p class="section-subtitle">7 אמנים. במה אחת. לילה בלתי נשכח.</p>
+        </div>
+
+        <div class="artist-headliner">
+            <div class="artist-badge">HEADLINER</div>
+            <h3 class="artist-name-big">עקיבא</h3>
+            <div class="artist-details">
+                <span class="artist-tag">Act 4: "שובה"</span>
+                <span class="artist-tag">75 דקות</span>
+                <span class="artist-tag artist-tag-gold">$50,000</span>
+            </div>
+            <p class="artist-claim">כוח על-טבעי על הבמה — אנרגיה שלא חווית מעולם</p>
+        </div>
+
+        <div class="artist-cohead">
+            <div class="artist-badge artist-badge-silver">CO-HEADLINER</div>
+            <h3 class="artist-name-medium">אברהם פריד</h3>
+            <div class="artist-details">
+                <span class="artist-tag">Act 3: "שמחה"</span>
+                <span class="artist-tag">60 דקות</span>
+                <span class="artist-tag">$25,000</span>
+            </div>
+            <p class="artist-subtitle">מלך השמחה — אגדה חיה</p>
+        </div>
+
+        <div class="artist-cohead">
+            <div class="artist-badge artist-badge-silver">CO-HEADLINER</div>
+            <h3 class="artist-name-medium">נתן גושן</h3>
+            <div class="artist-details">
+                <span class="artist-tag">Act 2: "געגוע"</span>
+                <span class="artist-tag">45 דקות</span>
+                <span class="artist-tag">$35,000</span>
+            </div>
+            <p class="artist-subtitle">הקול של הדור — הלהיטים הכי גדולים</p>
+        </div>
+
+        <div class="artists-grid">
+            <div class="artist-card">
+                <div class="artist-card-act">Act 2: "געגוע"</div>
+                <h4>אמיר דדון</h4>
+                <span class="artist-price">$35,000</span>
+            </div>
+            <div class="artist-card">
+                <div class="artist-card-act">Act 1: "התעוררות"</div>
+                <h4>זושא</h4>
+                <span class="artist-price">$20,000</span>
+                <span class="artist-origin">NYC</span>
+            </div>
+            <div class="artist-card">
+                <div class="artist-card-act">Act 1: "התעוררות"</div>
+                <h4>מוטי שטיינמץ</h4>
+                <span class="artist-price">$15,000</span>
+            </div>
+            <div class="artist-card">
+                <div class="artist-card-act">Act 3: "שמחה"</div>
+                <h4>איציק דדיה</h4>
+                <span class="artist-price">$15,000</span>
+            </div>
+        </div>
+
+        <div class="lineup-total">
+            <div class="lineup-total-inner">
+                <span>סה"כ אמנים: <strong>$195,000</strong></span>
+                <span class="text-muted">7 אמנים ברמה הכי גבוהה &mdash; Industry Average לlineup כזה: $800K-$1.5M</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- EXPERIENCE -->
+<!-- ═══════════════════════════════════════ -->
+<section id="experience" class="section section-gradient">
+    <div class="container">
+        <div class="section-header section-header-light">
+            <span class="section-number">04</span>
+            <h2>מסע הנשמה</h2>
+            <p class="section-subtitle">4 Acts. 4 שעות. חוויה שלא תשכחו לעולם.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-time">18:00</div>
+                <div class="timeline-content">
+                    <div class="timeline-icon">🌑</div>
+                    <h3>התעוררות</h3>
+                    <p class="timeline-duration">45 דקות</p>
+                    <p>חושך מוחלט. קול שופר מהדהד ב-Barclays. מסכי LED ענקיים — ירושלים, כותל, שמיים. זושא פותחים באנרגיה hippie-חסידית. מוטי שטיינמץ — קול מלאכים.</p>
+                    <div class="timeline-artists">זושא &bull; מוטי שטיינמץ</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">18:45</div>
+                <div class="timeline-content">
+                    <div class="timeline-icon">🌅</div>
+                    <h3>געגוע</h3>
+                    <p class="timeline-duration">45 דקות</p>
+                    <p>שירים על ארץ ישראל, געגועים, אהבה. נתן גושן ואמיר דדון — רגש, אנרגיה, כוח. Video interlude — סיפורי "שובה" מיהודים מכל העולם.</p>
+                    <div class="timeline-artists">נתן גושן &bull; אמיר דדון</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">19:30</div>
+                <div class="timeline-content">
+                    <div class="timeline-icon">💃</div>
+                    <h3>שמחה</h3>
+                    <p class="timeline-duration">60 דקות</p>
+                    <p>מלך השמחה! ריקודים, jumping, confetti cannons. פריד ודדיה ביחד על הבמה. <strong>הרגע: 19,000 אנשים שרים ביחד.</strong></p>
+                    <div class="timeline-artists">אברהם פריד &bull; איציק דדיה</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">20:30</div>
+                <div class="timeline-content">
+                    <div class="timeline-icon">🔥</div>
+                    <h3>שובה</h3>
+                    <p class="timeline-duration">75 דקות</p>
+                    <p>חוויה טרנסצנדנטית. עקיבא לבד על הבמה, spotlight אחד. Build up ל-climax. <strong>Grand Finale: כל 7 האמנים על הבמה ביחד.</strong></p>
+                    <div class="timeline-artists">עקיבא &bull; כולם</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PRODUCTION -->
+<!-- ═══════════════════════════════════════ -->
+<section id="production" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2>הפקה ברמה עולמית</h2>
+            <p class="section-subtitle">World-Class Production</p>
+        </div>
+        <div class="production-grid">
+            <div class="prod-card prod-main">
+                <div class="prod-role">Overall Production</div>
+                <h4>Nison &amp; Nachi Gordon Productions</h4>
+                <p>ניסיון ישיר באירועים של 15,000+ אנשים. הפקה ברמה הכי גבוהה.</p>
+                <span class="prod-source">מקור: Jerusalem Post, MSG.com</span>
+            </div>
+            <div class="prod-card">
+                <div class="prod-role">Stage Design</div>
+                <h4>Stufish / Es Devlin</h4>
+                <p>Beyoncé, U2, ABBA Voyage, Super Bowl LVII. 3 Emmy Awards.</p>
+                <span class="prod-source">stufish.com | esdevlin.com</span>
+            </div>
+            <div class="prod-card">
+                <div class="prod-role">Audio</div>
+                <h4>L-Acoustics</h4>
+                <p>Gold Standard. 13,000+ venues worldwide. מדויק ואמין.</p>
+                <span class="prod-source">l-acoustics.com</span>
+            </div>
+            <div class="prod-card">
+                <div class="prod-role">Lighting</div>
+                <h4>LeRoy Bennett / SEVEN</h4>
+                <p>14 שנים עם Prince. Super Bowl (Beyoncé). 50+ שנות ניסיון.</p>
+                <span class="prod-source">leroybennett.com</span>
+            </div>
+            <div class="prod-card">
+                <div class="prod-role">Infrastructure</div>
+                <h4>PRG + Clair Global</h4>
+                <p>World&rsquo;s leading production provider. AV, IT, Communications.</p>
+                <span class="prod-source">prg.com | clairglobal.com</span>
+            </div>
+            <div class="prod-card">
+                <div class="prod-role">Tech &amp; Innovation</div>
+                <h4>חדשנות טכנולוגית</h4>
+                <p>צמידי LED (Coldplay-style), AR, Cashless RFID, 4K Streaming, AI Photo Booth</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- VENUE -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-black">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2>Barclays Center</h2>
+            <p class="section-subtitle">Brooklyn, New York — הבית שלנו</p>
+        </div>
+        <div class="venue-comparison">
+            <table class="venue-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="venue-pick">Barclays ⭐</th>
+                        <th>MSG</th>
+                        <th>Prudential</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>קיבולת</td><td class="venue-pick">19,000</td><td>19,500</td><td>17,000</td></tr>
+                    <tr><td>עלות ללילה</td><td class="venue-pick">$350-450K</td><td>$500K+</td><td>$250-350K</td></tr>
+                    <tr><td>קהילה יהודית</td><td class="venue-pick">⭐⭐⭐</td><td>⭐⭐</td><td>⭐</td></tr>
+                    <tr><td>כשרות</td><td class="venue-pick">⭐⭐⭐</td><td>⭐</td><td>⭐</td></tr>
+                    <tr><td>Ticketing</td><td class="venue-pick">Ticketmaster</td><td>Ticketmaster</td><td>AXS</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="venue-reasons">
+            <div class="reason">🏠 Brooklyn = 1.6M יהודים — הקהילה הגדולה ביותר בארה"ב</div>
+            <div class="reason">🆕 בידול מ-MSG — ריבו כבר הופיע שם</div>
+            <div class="reason">💵 2 לילות = הנחת multi-night. חיסכון $100-200K מ-MSG</div>
+            <div class="reason">🍽️ Brooklyn = תשתית כשרות מושלמת</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- FINANCIALS -->
+<!-- ═══════════════════════════════════════ -->
+<section id="financials" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">07</span>
+            <h2>מודל פיננסי</h2>
+            <p class="section-subtitle">19,000 כרטיסים | מקסימום $120 | גברים + נשים עם מחיצה</p>
+        </div>
+
+        <!-- Tickets -->
+        <div class="finance-block">
+            <h3>🎫 כרטיסים — $2,300,000 (19,000 איש)</h3>
+            <div class="tickets-grid tickets-3">
+                <div class="ticket-tier ticket-vvip">
+                    <div class="ticket-name">💎 VIP "נשמה"</div>
+                    <div class="ticket-price">$199</div>
+                    <div class="ticket-qty">3,000 כרטיסים</div>
+                    <div class="ticket-revenue">$597,000</div>
+                    <ul class="ticket-perks">
+                        <li>מושבים מרכזיים שורות ראשונות</li>
+                        <li>כניסה מוקדמת שעה לפני</li>
+                        <li>אזור VIP Lounge</li>
+                        <li>מתנה בלעדית</li>
+                    </ul>
+                </div>
+                <div class="ticket-tier ticket-premium">
+                    <div class="ticket-name">⭐ Premium "אור"</div>
+                    <div class="ticket-price">$120</div>
+                    <div class="ticket-qty">6,000 כרטיסים</div>
+                    <div class="ticket-revenue">$720,000</div>
+                    <ul class="ticket-perks">
+                        <li>מושבים מרכזיים איכותיים</li>
+                        <li>נראות מעולה לבמה</li>
+                    </ul>
+                </div>
+                <div class="ticket-tier ticket-standard">
+                    <div class="ticket-name">🎵 Regular "שיר"</div>
+                    <div class="ticket-price">$99</div>
+                    <div class="ticket-qty">10,000 כרטיסים</div>
+                    <div class="ticket-revenue">$990,000</div>
+                    <ul class="ticket-perks">
+                        <li>מושבים טובים</li>
+                        <li>חוויה מלאה</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="finance-note">3 רמות פשוטות | מינימום: $99 | מקסימום: $199 | ממוצע: $121 | בלי backstage, בלי מטורפים</p>
+        </div>
+
+        <!-- Costs -->
+        <div class="finance-block">
+            <h3>💸 עלויות — $2,200,000 (לילה אחד)</h3>
+            <div class="costs-list">
+                <div class="cost-row"><span class="cost-name">🏟️ Venue</span><div class="cost-bar" style="--w:20%"></div><span class="cost-val">$430,000</span></div>
+                <div class="cost-row"><span class="cost-name">🎬 הפקה</span><div class="cost-bar" style="--w:18%"></div><span class="cost-val">$400,000</span></div>
+                <div class="cost-row"><span class="cost-name">📣 שיווק</span><div class="cost-bar" style="--w:11%"></div><span class="cost-val">$250,000</span></div>
+                <div class="cost-row"><span class="cost-name">🎤 אמנים</span><div class="cost-bar" style="--w:9%"></div><span class="cost-val">$195,000</span></div>
+                <div class="cost-row"><span class="cost-name">🎫 Ticketmaster (~7%)</span><div class="cost-bar" style="--w:7%"></div><span class="cost-val">$150,000</span></div>
+                <div class="cost-row"><span class="cost-name">🛡️ אבטחה + צוות</span><div class="cost-bar" style="--w:7%"></div><span class="cost-val">$150,000</span></div>
+                <div class="cost-row"><span class="cost-name">🍽️ F&amp;B/Merch עלויות</span><div class="cost-bar" style="--w:7%"></div><span class="cost-val">$150,000</span></div>
+                <div class="cost-row"><span class="cost-name">📋 ביטוח</span><div class="cost-bar" style="--w:5%"></div><span class="cost-val">$100,000</span></div>
+                <div class="cost-row"><span class="cost-name">📱 Tech + מחיצה</span><div class="cost-bar" style="--w:5%"></div><span class="cost-val">$100,000</span></div>
+                <div class="cost-row"><span class="cost-name">⚖️ משפטי + חשבונאות</span><div class="cost-bar" style="--w:3%"></div><span class="cost-val">$70,000</span></div>
+                <div class="cost-row"><span class="cost-name">🔄 Contingency 10%</span><div class="cost-bar" style="--w:9%"></div><span class="cost-val">$195,000</span></div>
+            </div>
+        </div>
+
+        <!-- PROFIT SPLIT -->
+        <div class="finance-block profit-split-block">
+            <h3>💰 חלוקת רווחים — $3,800,000</h3>
+            <div class="profit-grid">
+                <div class="profit-card">
+                    <div class="profit-percent">27%</div>
+                    <div class="profit-who">אתה</div>
+                    <div class="profit-amount">$1,026,000</div>
+                    <div class="profit-check">✅ מעל $1M!</div>
+                </div>
+                <div class="profit-card">
+                    <div class="profit-percent">27%</div>
+                    <div class="profit-who">דוד כרמי</div>
+                    <div class="profit-amount">$1,026,000</div>
+                    <div class="profit-check">✅ מעל $1M!</div>
+                </div>
+                <div class="profit-card">
+                    <div class="profit-percent">27%</div>
+                    <div class="profit-who">נאור כרמי</div>
+                    <div class="profit-amount">$1,026,000</div>
+                    <div class="profit-check">✅ מעל $1M!</div>
+                </div>
+                <div class="profit-card profit-investor-card">
+                    <div class="profit-percent">12%</div>
+                    <div class="profit-who">משקיע</div>
+                    <div class="profit-amount">$456,000</div>
+                    <div class="profit-check">📈 91% ROI על $500K</div>
+                </div>
+                <div class="profit-card">
+                    <div class="profit-percent">7%</div>
+                    <div class="profit-who">קרן טאטע</div>
+                    <div class="profit-amount">$266,000</div>
+                    <div class="profit-check">🏗️ Seed לשנה 2</div>
+                </div>
+            </div>
+
+            <!-- Scenarios -->
+            <div class="scenarios">
+                <h4>3 תרחישים</h4>
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <div class="scenario-name">Conservative</div>
+                        <div class="scenario-profit">$2,800,000</div>
+                        <div class="scenario-each">~$756K לשותף</div>
+                    </div>
+                    <div class="scenario-card scenario-baseline">
+                        <div class="scenario-name">Baseline</div>
+                        <div class="scenario-profit">$3,800,000</div>
+                        <div class="scenario-each">~$1,026K לשותף ✅</div>
+                    </div>
+                    <div class="scenario-card">
+                        <div class="scenario-name">Optimistic</div>
+                        <div class="scenario-profit">$4,800,000</div>
+                        <div class="scenario-each">~$1,296K לשותף 🔥</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- INVESTOR ROI -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-black">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">08</span>
+            <h2>ROI למשקיע</h2>
+            <p class="section-subtitle">תשואה על השקעה</p>
+        </div>
+        <div class="roi-grid">
+            <div class="roi-card">
+                <div class="roi-label">השקעה</div>
+                <div class="roi-value">$500,000</div>
+            </div>
+            <div class="roi-card roi-arrow">→</div>
+            <div class="roi-card">
+                <div class="roi-label">חלק ברווח (12%)</div>
+                <div class="roi-value roi-green">$456,000</div>
+            </div>
+            <div class="roi-card roi-arrow">→</div>
+            <div class="roi-card roi-highlight">
+                <div class="roi-label">סה"כ בחזרה</div>
+                <div class="roi-value roi-gold">$956,000</div>
+                <div class="roi-sub">השקעה + רווח</div>
+            </div>
+        </div>
+        <div class="roi-summary">
+            <div class="roi-metric">
+                <span class="roi-metric-val">91%</span>
+                <span class="roi-metric-label">ROI בשנה 1</span>
+            </div>
+            <div class="roi-metric">
+                <span class="roi-metric-val">12%</span>
+                <span class="roi-metric-label">Equity ב-Tate Events</span>
+            </div>
+            <div class="roi-metric">
+                <span class="roi-metric-val">x15</span>
+                <span class="roi-metric-label">צמיחה ב-5 שנים</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- SPONSORS -->
+<!-- ═══════════════════════════════════════ -->
+<section id="sponsors" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">09</span>
+            <h2>אסטרטגיית חסויות</h2>
+            <p class="section-subtitle">$2,200,000 Target — 19,000 איש, קירוב, מוזיקה יהודית</p>
+        </div>
+        <div class="sponsor-hero">
+            <div class="sponsor-elal">
+                <div class="sponsor-tier-badge">👑 Title Sponsor</div>
+                <h3>✈️ El Al Airlines</h3>
+                <div class="sponsor-amount">$500,000</div>
+                <ul>
+                    <li>כבר חסו את ריבו ב-MSG — precedent מוכח</li>
+                    <li>19,000 יהודים אמריקאים בלילה אחד = קהל מושלם</li>
+                    <li>"שובה" = חזרה = טיסה הביתה = El Al</li>
+                    <li>הגרלת טיסות לישראל על הבמה בשני הלילות!</li>
+                </ul>
+                <span class="sponsor-source">מקור: El Al חסו את ריבו ב-MSG (JNS.org)</span>
+            </div>
+        </div>
+        <div class="sponsor-tiers">
+            <div class="sponsor-card"><span class="s-tier">💎 Platinum</span><span class="s-price">$150K &times;3</span><span>Birthright, UJA, Wix</span></div>
+            <div class="sponsor-card"><span class="s-tier">🥇 Gold</span><span class="s-price">$75K &times;5</span><span>Banks, Osem, Tech</span></div>
+            <div class="sponsor-card"><span class="s-tier">🥈 Silver</span><span class="s-price">$35K &times;6</span><span>Jewish Media</span></div>
+            <div class="sponsor-card"><span class="s-tier">🥉 Bronze</span><span class="s-price">$15K &times;10</span><span>Brooklyn Local</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- LEGAL -->
+<!-- ═══════════════════════════════════════ -->
+<section id="legal" class="section section-black">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">10</span>
+            <h2>מסגרת משפטית</h2>
+            <p class="section-subtitle">Legal, Tax, Insurance, IP</p>
+        </div>
+        <div class="legal-grid">
+            <div class="legal-card">
+                <h4>⚖️ מבנה עסקי</h4>
+                <ul>
+                    <li>LLC ניו יורק ($200) — NY DOS</li>
+                    <li>Operating Agreement — NY Law §417</li>
+                    <li>4 חברים: אתה, דוד, נאור, משקיע</li>
+                    <li>Entertainment Lawyer NYC</li>
+                </ul>
+            </div>
+            <div class="legal-card">
+                <h4>🛡️ ביטוח ($130K)</h4>
+                <ul>
+                    <li>General Liability: $1M/$2M</li>
+                    <li>Event Cancellation Insurance</li>
+                    <li>Workers' Comp + Equipment</li>
+                    <li>רכישה: 12-18 חודש לפני</li>
+                </ul>
+            </div>
+            <div class="legal-card">
+                <h4>💲 מיסוי</h4>
+                <ul>
+                    <li>Sales Tax NYC: 8.875%</li>
+                    <li>Foreign Artist: 30% withholding</li>
+                    <li>US-Israel Tax Treaty — הפחתה</li>
+                    <li>LLC Pass-through</li>
+                </ul>
+            </div>
+            <div class="legal-card">
+                <h4>📝 חוזים (8)</h4>
+                <ul>
+                    <li>Operating Agreement</li>
+                    <li>Artist Agreements &times;6</li>
+                    <li>Venue Rental (Barclays)</li>
+                    <li>Sponsor + Investor + Vendors</li>
+                </ul>
+            </div>
+            <div class="legal-card">
+                <h4>™️ קניין רוחני</h4>
+                <ul>
+                    <li>USPTO: "שובה" + "טאטע"</li>
+                    <li>Recording + Streaming Rights</li>
+                    <li>Domains: shuvah.com, tate-events.com</li>
+                    <li>Social: @ShuvahNYC, @TateEvents</li>
+                </ul>
+            </div>
+            <div class="legal-card">
+                <h4>📋 רישיונות NYC</h4>
+                <ul>
+                    <li>FDNY: Pyrotechnics</li>
+                    <li>NYPD: Sound Permit</li>
+                    <li>Health Dept: TFSE ($70)</li>
+                    <li>ASCAP/BMI Music License</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TATE BRAND -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-gradient">
+    <div class="container">
+        <div class="section-header section-header-light">
+            <span class="section-number">11</span>
+            <h2>מותג טאטע</h2>
+            <p class="section-subtitle">ה-Live Nation של המוזיקה היהודית</p>
+        </div>
+        <div class="tate-brand">
+            <div class="tate-logo-block">
+                <span class="tate-hebrew">טאטע</span>
+                <span class="tate-english">TATE EVENTS</span>
+                <span class="tate-tagline">"חוזרים הביתה" &mdash; Coming Home</span>
+            </div>
+            <div class="tate-phases">
+                <div class="tate-phase">
+                    <h4>לפני האירוע</h4>
+                    <p>"שובה — A Tate Production" על כל החומרים. אתרים, Social, WhatsApp.</p>
+                </div>
+                <div class="tate-phase">
+                    <h4>באירוע</h4>
+                    <p>הכרזת MC, קו Merch טאטע, סרטון חזון 2 דק', הכרזה על 2027.</p>
+                </div>
+                <div class="tate-phase">
+                    <h4>אחרי</h4>
+                    <p>Email ל-30,000 קונים, Early Bird בלעדי, Documentary ביוטיוב.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- GLOBAL -->
+<!-- ═══════════════════════════════════════ -->
+<section id="global" class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">12</span>
+            <h2>כיבוש העולם היהודי</h2>
+            <p class="section-subtitle">51% מיהודי העולם חיים ב-10 ערים. אנחנו הולכים אליהם.</p>
+        </div>
+        <div class="global-map">
+            <div class="city-card city-current">
+                <div class="city-year">Year 1</div>
+                <h4>🗽 New York</h4>
+                <div class="city-pop">1,600,000 יהודים</div>
+                <div class="city-venue">Barclays Center</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 2</div>
+                <h4>🌴 Los Angeles</h4>
+                <div class="city-pop">519,200</div>
+                <div class="city-venue">The Forum (18K)</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 3</div>
+                <h4>🌊 Miami</h4>
+                <div class="city-pop">250,000+</div>
+                <div class="city-venue">Kaseya Center</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 3</div>
+                <h4>🇮🇱 Tel Aviv</h4>
+                <div class="city-pop">3,000,000+</div>
+                <div class="city-venue">Bloomfield (30K)</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 3</div>
+                <h4>🇬🇧 London</h4>
+                <div class="city-pop">280,000</div>
+                <div class="city-venue">The O2 Arena (20K)</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 4</div>
+                <h4>🇫🇷 Paris</h4>
+                <div class="city-pop">277,000</div>
+                <div class="city-venue">Accor Arena (20K)</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 4</div>
+                <h4>🇦🇷 Buenos Aires</h4>
+                <div class="city-pop">244,000</div>
+                <div class="city-venue">Movistar Arena</div>
+            </div>
+            <div class="city-card">
+                <div class="city-year">Year 4</div>
+                <h4>🍁 Toronto</h4>
+                <div class="city-pop">200,000+</div>
+                <div class="city-venue">Scotiabank Arena</div>
+            </div>
+        </div>
+
+        <div class="growth-section">
+            <h3>📈 צמיחה 5 שנים</h3>
+            <div class="growth-chart">
+                <div class="growth-bar" style="--h:8%"><span class="growth-val">$6M</span><span class="growth-year">2026</span></div>
+                <div class="growth-bar" style="--h:19%"><span class="growth-val">$14M</span><span class="growth-year">2027</span></div>
+                <div class="growth-bar" style="--h:37%"><span class="growth-val">$28M</span><span class="growth-year">2028</span></div>
+                <div class="growth-bar" style="--h:63%"><span class="growth-val">$48M</span><span class="growth-year">2029</span></div>
+                <div class="growth-bar" style="--h:100%"><span class="growth-val">$75M</span><span class="growth-year">2030</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- INVESTOR PITCH -->
+<!-- ═══════════════════════════════════════ -->
+<section id="investor" class="section section-black">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">13</span>
+            <h2>למשקיע</h2>
+            <p class="section-subtitle">The Opportunity of a Lifetime</p>
+        </div>
+        <div class="investor-grid">
+            <div class="inv-card">
+                <div class="inv-num">01</div>
+                <h4>The Opportunity</h4>
+                <p>Live music = $32B globally. Jewish entertainment = $500M+ underserved niche. אין מותג מוביל. אנחנו ראשונים.</p>
+            </div>
+            <div class="inv-card">
+                <div class="inv-num">02</div>
+                <h4>Validation</h4>
+                <p>Ribo: Sold Out MSG &times;2. Yamim Ba'im Festival. Tzama Israel: 100K. הביקוש מוכח.</p>
+            </div>
+            <div class="inv-card">
+                <div class="inv-num">03</div>
+                <h4>Unfair Advantage</h4>
+                <p>7 אמנים ב-$195K (vs $1M+ industry). Brooklyn = 1.6M יהודים. El Al pipeline. Gordon Productions. מחיצה = קירוב.</p>
+            </div>
+            <div class="inv-card inv-card-highlight">
+                <div class="inv-num">04</div>
+                <h4>The Numbers</h4>
+                <p>Revenue: $6M | Costs: $2.2M | <strong>Profit: $3.8M (63% margin)</strong><br>כרטיס $99-$199 | VIP בלי מטורפים | עם מחיצה</p>
+            </div>
+            <div class="inv-card">
+                <div class="inv-num">05</div>
+                <h4>Growth</h4>
+                <p>$6M &rarr; $75M ב-5 שנים. NYC &rarr; LA &rarr; Miami &rarr; Tel Aviv &rarr; London &rarr; Global.</p>
+            </div>
+            <div class="inv-card inv-card-cta">
+                <div class="inv-num">06</div>
+                <h4>The Ask</h4>
+                <p>השקעה: $500K | Equity: 12%<br><strong>תשואה: $456K שנה 1 (91% ROI)</strong><br>סה"כ חזרה: $956K</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TIMELINE -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-dark">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-number">14</span>
+            <h2>לוח זמנים</h2>
+            <p class="section-subtitle">Master Timeline</p>
+        </div>
+        <div class="master-timeline">
+            <div class="mt-item mt-red"><div class="mt-badge">שבוע 1-2</div><h4>Foundation</h4><p>עו"ד entertainment, Operating Agreement, LOI ל-6 אמנים, Barclays</p></div>
+            <div class="mt-item mt-orange"><div class="mt-badge">שבוע 2-4</div><h4>Setup</h4><p>LLC, EIN, Pitch Deck, El Al, Domains, Trademarks USPTO</p></div>
+            <div class="mt-item mt-yellow"><div class="mt-badge">שבוע 5-6</div><h4>Funding + GO/NO-GO</h4><p>גיוס משקיע, חוזי אמנים, ביטוח, Tax treaty docs</p></div>
+            <div class="mt-item mt-green"><div class="mt-badge">חודש 3-4</div><h4>Pre-Production</h4><p>סגירת חסויות, Gordon+Stufish+L-Acoustics, Videos, PR agency</p></div>
+            <div class="mt-item mt-blue"><div class="mt-badge">חודש 4-5</div><h4>Marketing Blitz</h4><p>Lineup reveals (אמן בשבוע!), Pre-sale, Influencers, Moment House setup</p></div>
+            <div class="mt-item mt-purple"><div class="mt-badge">חודש 5-6</div><h4>Acceleration</h4><p>General sales, Flash sales, Billboards, Permits (FDNY, NYPD)</p></div>
+            <div class="mt-item mt-pink"><div class="mt-badge">חודש 6-7</div><h4>Final Prep</h4><p>Rehearsals, Load-in (3-4 ימים), Sound check, Streaming test</p></div>
+            <div class="mt-item mt-fire"><div class="mt-badge">⭐ THE NIGHT</div><h4>שובה!</h4><p>מוצ"ש סתיו 2026 | 19,000 נשמות | גברים + נשים עם מחיצה | 18:00-22:00</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- NEXT STEPS -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section section-gradient">
+    <div class="container">
+        <div class="section-header section-header-light">
+            <span class="section-number">15</span>
+            <h2>Next Steps</h2>
+            <p class="section-subtitle">מה עושים עכשיו</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card step-urgent">
+                <div class="step-week">שבוע 1</div>
+                <ul>
+                    <li>Entertainment Lawyer NYC</li>
+                    <li>LOI ל-6 אמנים</li>
+                    <li>פנייה ל-Barclays (2 לילות)</li>
+                </ul>
+            </div>
+            <div class="step-card">
+                <div class="step-week">שבוע 2-3</div>
+                <ul>
+                    <li>LLC + EIN ($200)</li>
+                    <li>Investor Pitch Deck</li>
+                    <li>פנייה ל-El Al</li>
+                    <li>Domains + Trademarks</li>
+                </ul>
+            </div>
+            <div class="step-card">
+                <div class="step-week">שבוע 4-5</div>
+                <ul>
+                    <li>גיוס משקיע ($500K)</li>
+                    <li>Tax treaty docs</li>
+                    <li>ביטוח: Cancellation + Liability</li>
+                </ul>
+            </div>
+            <div class="step-card step-go">
+                <div class="step-week">שבוע 6</div>
+                <div class="step-go-text">⭐ GO / NO-GO ⭐</div>
+                <p>Venue ✓ Artists ✓ Investor ✓ El Al ✓</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-brand">
+            <span class="footer-hebrew">שובה</span>
+            <span class="footer-tagline">חוזרים הביתה — A Tate Production</span>
+        </div>
+        <div class="footer-partners">שותפים מייסדים: [אתה] &bull; דוד אברהם כרמי &bull; נאור כרמי</div>
+        <div class="footer-copy">&copy; 2026 Tate Events LLC. All rights reserved.</div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

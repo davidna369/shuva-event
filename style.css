@@ -1,0 +1,1692 @@
+/* ============================================
+   SHUVAH — שובה
+   Premium Business Plan Website
+   ============================================ */
+
+:root {
+    --gold: #D4A843;
+    --gold-light: #F0D78C;
+    --gold-dark: #A07D2E;
+    --accent: #E8915A;
+    --fire: #FF6B35;
+    --silver: #B8C4D0;
+    --bg-dark: #0A0A0F;
+    --bg-section: #111118;
+    --bg-card: #1A1A24;
+    --bg-card-hover: #222232;
+    --text: #EEEEF2;
+    --text-muted: #8888A0;
+    --text-dim: #555570;
+    --gradient-start: #1a0a2e;
+    --gradient-end: #0d1b3e;
+    --border: rgba(255,255,255,0.06);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ── NAVBAR ── */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#navbar.scrolled {
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    transition: 0.3s;
+}
+
+/* ── HERO ── */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(212, 168, 67, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(232, 145, 90, 0.05) 0%, transparent 50%),
+                var(--bg-dark);
+}
+
+.particle-field {
+    position: absolute;
+    inset: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0;
+    animation: particleFloat 8s infinite ease-in-out;
+}
+
+@keyframes particleFloat {
+    0%, 100% { opacity: 0; transform: translateY(0) scale(1); }
+    10% { opacity: 0.6; }
+    50% { opacity: 0.3; transform: translateY(-120px) scale(0.5); }
+    90% { opacity: 0; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    padding: 8px 24px;
+    border: 1px solid rgba(212, 168, 67, 0.3);
+    border-radius: 100px;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-title {
+    margin-bottom: 24px;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-hebrew {
+    display: block;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 40px rgba(212, 168, 67, 0.2));
+}
+
+.hero-english {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 400;
+    letter-spacing: 16px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 48px;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.hero-meta-icon {
+    font-size: 1.3rem;
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 16px 48px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #0A0A0F;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 100px;
+    transition: all 0.3s;
+    animation: fadeInUp 1s ease 1s both;
+}
+
+.hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(212, 168, 67, 0.3);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-indicator {
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(212, 168, 67, 0.3);
+    border-radius: 12px;
+    position: relative;
+}
+
+.scroll-indicator::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 3px;
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%, 100% { top: 8px; opacity: 1; }
+    50% { top: 20px; opacity: 0.3; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SECTIONS ── */
+.section {
+    padding: 100px 0;
+}
+
+.section-dark { background: var(--bg-section); }
+.section-black { background: var(--bg-dark); }
+.section-gradient {
+    background: linear-gradient(160deg, var(--gradient-start), var(--gradient-end));
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-number {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.section-header-light h2 { color: #fff; }
+.section-header-light .section-subtitle { color: rgba(255,255,255,0.6); }
+
+/* ── STATS ── */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 56px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212, 168, 67, 0.2);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.stat-gold .stat-number { color: var(--gold); }
+.stat-dark .stat-number { color: var(--text-muted); }
+.stat-fire .stat-number { color: var(--fire); }
+.stat-glow .stat-number { color: var(--gold-light); }
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-sub {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── BAR CHART ── */
+.revenue-breakdown {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+}
+
+.revenue-breakdown h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+}
+
+.bar-chart { display: flex; flex-direction: column; gap: 16px; }
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 120px;
+    align-items: center;
+    gap: 16px;
+}
+
+.bar-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: left;
+}
+
+.bar-track {
+    height: 28px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 14px;
+    background: var(--bar-color, var(--gold));
+    width: 0;
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bar-fill.animated {
+    width: calc(var(--target-width) * 1%);
+}
+
+.bar-value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text);
+}
+
+.breakeven-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(212, 168, 67, 0.08);
+    border: 1px solid rgba(212, 168, 67, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 24px 32px;
+}
+
+.breakeven-icon { font-size: 2rem; }
+.text-muted { color: var(--text-muted); }
+
+/* ── LINEUP ── */
+.artist-headliner {
+    text-align: center;
+    padding: 64px 0 48px;
+    position: relative;
+}
+
+.artist-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--gold);
+    padding: 6px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.artist-badge-silver {
+    color: var(--silver);
+    border-color: var(--silver);
+}
+
+.artist-name-big {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+}
+
+.artist-details {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.artist-tag {
+    background: rgba(255,255,255,0.06);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.artist-tag-gold {
+    background: rgba(212, 168, 67, 0.15);
+    color: var(--gold);
+}
+
+.artist-claim {
+    font-size: 0.95rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.artist-cohead {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+}
+
+.artist-name-medium {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: var(--silver);
+    margin-bottom: 12px;
+}
+
+.artist-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+}
+
+.artist-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.artist-card:hover {
+    border-color: rgba(212, 168, 67, 0.3);
+    transform: translateY(-4px);
+}
+
+.artist-card-act {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.artist-card h4 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.artist-price {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.artist-origin {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    background: rgba(212, 168, 67, 0.12);
+    color: var(--gold);
+    padding: 2px 10px;
+    border-radius: 100px;
+}
+
+.lineup-total {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.lineup-total-inner {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    background: rgba(212, 168, 67, 0.06);
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    padding: 20px 40px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+}
+
+/* ── TIMELINE (Experience) ── */
+.timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    right: calc(100% - 76px);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), var(--fire));
+    opacity: 0.3;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    right: calc(100% - 80px);
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.timeline-time {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: left;
+    padding-top: 2px;
+}
+
+.timeline-content {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.timeline-duration {
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.timeline-content p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.timeline-artists {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--gold-light);
+}
+
+/* ── PRODUCTION ── */
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.prod-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all 0.3s;
+}
+
+.prod-card:hover {
+    border-color: rgba(212, 168, 67, 0.2);
+    transform: translateY(-3px);
+}
+
+.prod-main {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.08), rgba(212, 168, 67, 0.02));
+    border-color: rgba(212, 168, 67, 0.2);
+}
+
+.prod-role {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.prod-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.prod-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.tech-strip {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+/* ── VENUE TABLE ── */
+.venue-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+}
+
+.venue-table th, .venue-table td {
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.venue-table thead th {
+    font-weight: 700;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.venue-pick {
+    background: rgba(212, 168, 67, 0.06) !important;
+    color: var(--gold) !important;
+    font-weight: 700 !important;
+}
+
+.venue-table td:first-child {
+    text-align: right;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.venue-reasons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.reason {
+    background: var(--bg-card);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+}
+
+/* ── FINANCIALS ── */
+.finance-block {
+    margin-bottom: 56px;
+}
+
+.finance-block h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+}
+
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.ticket-tier {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.ticket-tier:hover { transform: translateY(-3px); }
+
+.tickets-3 { grid-template-columns: repeat(3, 1fr); }
+.ticket-vvip { border-color: rgba(212, 168, 67, 0.3); background: linear-gradient(180deg, rgba(212, 168, 67, 0.08), transparent); }
+
+.ticket-name { font-size: 0.8rem; font-weight: 700; margin-bottom: 8px; }
+.ticket-price { font-size: 1.5rem; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+.ticket-qty { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 4px; }
+.ticket-revenue { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+
+.ticket-perks {
+    list-style: none;
+    margin-top: 12px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.ticket-perks li::before { content: '✓ '; color: var(--gold); }
+
+/* Costs */
+.costs-list { display: flex; flex-direction: column; gap: 12px; }
+
+.cost-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    align-items: center;
+    gap: 16px;
+}
+
+.cost-name { font-size: 0.82rem; text-align: right; }
+
+.cost-bar {
+    height: 24px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cost-bar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: var(--w);
+    background: linear-gradient(90deg, var(--accent), var(--fire));
+    border-radius: 12px;
+    transition: width 1s ease;
+}
+
+.cost-val {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Profit Split */
+.profit-split-block {
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.04), rgba(255, 107, 53, 0.04));
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    border-radius: var(--radius);
+    padding: 40px;
+}
+
+.profit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.profit-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.profit-percent {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--gold);
+}
+
+.profit-who {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.profit-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.profit-check {
+    font-size: 0.8rem;
+    color: #4CAF50;
+}
+
+/* ── SPONSORS ── */
+.sponsor-hero {
+    margin-bottom: 40px;
+}
+
+.sponsor-elal {
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.08), rgba(212, 168, 67, 0.02));
+    border: 1px solid rgba(212, 168, 67, 0.25);
+    border-radius: var(--radius);
+    padding: 48px;
+    text-align: center;
+}
+
+.sponsor-tier-badge {
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.sponsor-elal h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.sponsor-amount {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.sponsor-elal ul {
+    list-style: none;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.sponsor-elal li {
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.sponsor-elal li::before { content: '✓ '; color: var(--gold); font-weight: 700; }
+
+.sponsor-tiers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.sponsor-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.s-tier { font-weight: 700; font-size: 0.9rem; }
+.s-price { color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+
+/* ── LEGAL ── */
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.legal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.legal-card h4 {
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.legal-card ul {
+    list-style: none;
+}
+
+.legal-card li {
+    padding: 4px 0;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.legal-card li:last-child { border-bottom: none; }
+.legal-card li::before { content: '• '; color: var(--gold); }
+
+/* ── MARKETING ── */
+.marketing-phases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.phase-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.phase-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.1);
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.phase-card h4 { margin-bottom: 4px; }
+.phase-time { font-size: 0.75rem; color: var(--gold); margin-bottom: 8px; }
+.phase-card p:last-child { font-size: 0.82rem; color: var(--text-muted); }
+
+/* ── TATE BRAND ── */
+.tate-brand {
+    text-align: center;
+}
+
+.tate-logo-block {
+    margin-bottom: 48px;
+}
+
+.tate-hebrew {
+    display: block;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+}
+
+.tate-english {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 10px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+}
+
+.tate-tagline {
+    display: block;
+    margin-top: 12px;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.tate-phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: right;
+}
+
+.tate-phase {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.tate-phase h4 {
+    color: var(--gold-light);
+    margin-bottom: 8px;
+}
+
+.tate-phase p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.65);
+}
+
+/* ── GLOBAL ── */
+.global-map {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.city-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.city-card:hover { transform: translateY(-3px); border-color: rgba(212, 168, 67, 0.2); }
+
+.city-current {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.1), transparent);
+}
+
+.city-year {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.city-card h4 { font-size: 1.1rem; margin-bottom: 6px; }
+.city-pop { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px; }
+.city-venue { font-size: 0.75rem; color: var(--text-dim); }
+
+/* Growth Chart */
+.growth-section {
+    text-align: center;
+}
+
+.growth-section h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+}
+
+.growth-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 24px;
+    height: 300px;
+}
+
+.growth-bar {
+    width: 80px;
+    height: calc(var(--h));
+    background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height 1s ease;
+}
+
+.growth-val {
+    position: absolute;
+    top: -28px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--gold-light);
+    white-space: nowrap;
+}
+
+.growth-year {
+    position: absolute;
+    bottom: -28px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ── INVESTOR ── */
+.investor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.inv-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    transition: all 0.3s;
+}
+
+.inv-card:hover { transform: translateY(-3px); }
+
+.inv-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(212, 168, 67, 0.2);
+    margin-bottom: 8px;
+}
+
+.inv-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.inv-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.inv-card-highlight {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.08), transparent);
+}
+
+.inv-card-cta {
+    border-color: var(--fire);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.08), transparent);
+}
+
+/* ── MASTER TIMELINE ── */
+.master-timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mt-item {
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+    border-right: 4px solid var(--text-dim);
+}
+
+.mt-red { border-right-color: #EF4444; }
+.mt-orange { border-right-color: #F97316; }
+.mt-yellow { border-right-color: #EAB308; }
+.mt-green { border-right-color: #22C55E; }
+.mt-blue { border-right-color: #3B82F6; }
+.mt-purple { border-right-color: #A855F7; }
+.mt-pink { border-right-color: #EC4899; }
+.mt-fire {
+    border-right-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212, 168, 67, 0.1), transparent);
+}
+
+.mt-badge {
+    background: rgba(255,255,255,0.06);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.mt-item h4 { font-size: 1rem; margin-bottom: 2px; }
+.mt-item p { font-size: 0.82rem; color: var(--text-muted); }
+
+/* ── STEPS ── */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.step-week {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.step-card ul {
+    list-style: none;
+}
+
+.step-card li {
+    padding: 6px 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.step-card li::before { content: '□ '; color: var(--gold); }
+
+.step-urgent {
+    border-color: rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.06);
+}
+
+.step-go {
+    border-color: var(--gold);
+    background: rgba(212, 168, 67, 0.1);
+    text-align: center;
+}
+
+.step-go-text {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* ── NIGHTS / FORMAT ── */
+.nights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.night-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    transition: all 0.3s;
+}
+
+.night-card:hover { transform: translateY(-4px); border-color: rgba(212,168,67,0.3); }
+
+.night-icon { font-size: 2.5rem; margin-bottom: 16px; }
+
+.night-card h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.night-capacity {
+    font-size: 0.9rem;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.night-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.night-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.night-tags span {
+    background: rgba(212,168,67,0.1);
+    color: var(--gold);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.nights-advantage {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+}
+
+.nights-advantage h4 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.adv-item {
+    background: rgba(255,255,255,0.03);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+/* ── ROI ── */
+.roi-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.roi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    text-align: center;
+    min-width: 160px;
+}
+
+.roi-arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--gold);
+    min-width: auto;
+    padding: 0;
+}
+
+.roi-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.roi-value {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.roi-green { color: #22C55E; }
+.roi-gold { color: var(--gold); }
+
+.roi-sub {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+}
+
+.roi-highlight {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, rgba(212,168,67,0.1), transparent);
+}
+
+.roi-summary {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.roi-metric {
+    text-align: center;
+}
+
+.roi-metric-val {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold);
+}
+
+.roi-metric-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* ── SCENARIOS ── */
+.scenarios {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.scenarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.scenario-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    text-align: center;
+}
+
+.scenario-baseline {
+    border-color: var(--gold);
+    background: rgba(212,168,67,0.06);
+}
+
+.scenario-name {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.scenario-profit {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+
+.scenario-each {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ── PROFIT INVESTOR CARD ── */
+.profit-investor-card {
+    border-color: rgba(59,130,246,0.3);
+    background: rgba(59,130,246,0.06);
+}
+
+.finance-note {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.prod-source, .artist-source, .sponsor-source {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.footer-partners {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* ── RESPONSIVE ADDITIONS ── */
+@media (max-width: 768px) {
+    .nights-grid { grid-template-columns: 1fr; }
+    .advantage-grid { grid-template-columns: repeat(2, 1fr); }
+    .roi-grid { flex-direction: column; }
+    .roi-arrow { transform: rotate(90deg); }
+    .roi-summary { flex-direction: column; gap: 24px; }
+    .scenario-grid { grid-template-columns: 1fr; }
+}
+
+/* ── FOOTER ── */
+.footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-hebrew {
+    display: block;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.footer-tagline {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .artists-grid { grid-template-columns: repeat(2, 1fr); }
+    .tickets-grid { grid-template-columns: repeat(3, 1fr); }
+    .production-grid { grid-template-columns: repeat(2, 1fr); }
+    .legal-grid { grid-template-columns: repeat(2, 1fr); }
+    .global-map { grid-template-columns: repeat(3, 1fr); }
+    .investor-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+    }
+    .hero-meta { flex-direction: column; gap: 12px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .artists-grid { grid-template-columns: 1fr 1fr; }
+    .tickets-grid { grid-template-columns: repeat(2, 1fr); }
+    .profit-grid { grid-template-columns: repeat(2, 1fr); }
+    .sponsor-tiers { grid-template-columns: repeat(2, 1fr); }
+    .marketing-phases { grid-template-columns: repeat(2, 1fr); }
+    .tate-phases { grid-template-columns: 1fr; }
+    .legal-grid { grid-template-columns: 1fr; }
+    .global-map { grid-template-columns: repeat(2, 1fr); }
+    .investor-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .venue-reasons { grid-template-columns: 1fr; }
+    .bar-row { grid-template-columns: 60px 1fr 90px; }
+    .growth-chart { gap: 12px; }
+    .growth-bar { width: 50px; }
+    .section { padding: 70px 0; }
+}
+
+@media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .artists-grid { grid-template-columns: 1fr; }
+    .tickets-grid { grid-template-columns: 1fr; }
+    .profit-grid { grid-template-columns: 1fr; }
+    .sponsor-tiers { grid-template-columns: 1fr; }
+    .marketing-phases { grid-template-columns: 1fr; }
+    .global-map { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .growth-bar { width: 40px; }
+}
