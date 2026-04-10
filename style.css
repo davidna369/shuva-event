@@ -1676,6 +1676,54 @@ body {
     .section-media { padding: 60px 0 70px; }
 }
 
+/* ── PHOTO DIVIDERS ── */
+.photo-divider {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+.photo-divider::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,15,0.7) 0%, rgba(10,10,15,0.3) 50%, rgba(10,10,15,0.7) 100%);
+    pointer-events: none;
+}
+.photo-divider-tall {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-divider-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.photo-divider-overlay h2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.8), 0 0 60px rgba(212,168,67,0.3);
+    letter-spacing: 2px;
+}
+.hero[style*="background-image"] {
+    background-size: cover;
+    background-position: center top;
+}
+.hero[style*="background-image"] .hero-bg {
+    background: linear-gradient(180deg, rgba(10,10,15,0.85) 0%, rgba(10,10,15,0.75) 40%, rgba(10,10,15,0.9) 100%);
+}
+@media (max-width: 768px) {
+    .photo-divider { height: 200px; background-attachment: scroll; }
+    .photo-divider-tall { height: 300px; }
+    .photo-divider-overlay h2 { font-size: 2rem; }
+}
+
 /* ── PHOTO GRID ── */
 .photo-grid {
     display: grid;
