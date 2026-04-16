@@ -440,6 +440,106 @@ body {
     color: var(--text);
 }
 
+/* ── Strategy Section ── */
+.strategy-team { margin-bottom: 60px; }
+.strategy-team h3, .strategy-phases h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 24px; text-align: center; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.team-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.team-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.team-icon { font-size: 2rem; margin-bottom: 12px; }
+.team-card h4 { color: var(--gold-light); font-size: 1.2rem; margin-bottom: 6px; }
+.team-card p { color: var(--text-muted); font-size: 0.85rem; }
+
+.strategy-phases { margin-bottom: 40px; }
+.phase-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    padding: 32px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.phase-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+}
+.phase-1::before { background: var(--gold); }
+.phase-2::before { background: var(--accent); }
+.phase-3::before { background: var(--fire); }
+
+.phase-number {
+    display: inline-block;
+    background: rgba(212, 168, 67, 0.15);
+    color: var(--gold);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.phase-title { font-size: 1.6rem; color: var(--text); font-weight: 800; margin-bottom: 16px; }
+.phase-desc p { color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
+
+.phase-artists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+}
+.phase-artist {
+    background: rgba(212, 168, 67, 0.08);
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    border-radius: 8px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.phase-artist-tbd {
+    background: rgba(255,255,255,0.04);
+    border: 1px dashed rgba(255,255,255,0.15);
+}
+.phase-artist-name { color: var(--gold-light); font-weight: 700; font-size: 1rem; }
+.phase-artist-audience { color: var(--text-muted); font-size: 0.8rem; }
+
+.phase-why {
+    background: rgba(34, 197, 94, 0.08);
+    border: 1px solid rgba(34, 197, 94, 0.15);
+    border-radius: 8px;
+    padding: 16px 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.phase-why strong { color: #22C55E; }
+
+.strategy-note {
+    text-align: center;
+    background: rgba(212, 168, 67, 0.06);
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.strategy-note strong { color: var(--gold); }
+
+@media (max-width: 768px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .phase-artists { grid-template-columns: 1fr; }
+}
+
 .breakeven-box {
     display: flex;
     align-items: center;
