@@ -1683,6 +1683,47 @@ body {
     color: var(--text-muted);
     margin-bottom: 16px;
 }
+.footer-founders { margin-bottom: 20px; }
+.footer-founders-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+.footer-founders-names {
+    font-size: 1rem;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Profit Summary */
+.profit-summary-box {
+    text-align: center;
+    padding: 48px 32px;
+    background: rgba(212, 168, 67, 0.06);
+    border: 1px solid rgba(212, 168, 67, 0.15);
+    border-radius: var(--radius-sm);
+}
+.profit-summary-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.profit-summary-label {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+.profit-summary-sub {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
 
 /* ── MEDIA SECTION ── */
 .section-media {
